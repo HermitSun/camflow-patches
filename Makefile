@@ -1,5 +1,5 @@
 kernel-version=5.9.11
-lsm-version=0.7.1
+lsm-version=0.7.1-jiffies
 fedora-version=33
 ubuntu-version='bionic'
 arch=x86_64

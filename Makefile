@@ -8,9 +8,9 @@ prepare:
 	mkdir -p ~/build
 	cd ~/build && git clone -b v$(kernel-version) --single-branch git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
 	cd ~/build/linux-stable && $(MAKE) mrproper
-	cd ~/build && wget https://github.com/camflow/HermitSun/releases/download/v$(lsm-version)/0001-information-flow.patch
+	cd ~/build && wget https://github.com/HermitSun/camflow-dev/releases/download/v$(lsm-version)/0001-information-flow.patch
 	cd ~/build/linux-stable && git apply ../0001-information-flow.patch
-	cd ~/build && wget https://github.com/camflow/HermitSun/releases/download/v$(lsm-version)/0002-camflow.patch
+	cd ~/build && wget https://github.com/HermitSun/camflow-dev/releases/download/v$(lsm-version)/0002-camflow.patch
 	cd ~/build/linux-stable && git apply ../0002-camflow.patch
 	cd ~/build/linux-stable && sed -i -e "s/EXTRAVERSION =/EXTRAVERSION = camflow$(lsm-version)/g" Makefile
 
